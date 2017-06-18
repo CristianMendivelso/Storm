@@ -14,7 +14,7 @@ public class HelloStorm {
 
 	public static void main(String[] args) throws Exception{
 		Config config = new Config();
-		config.put("inputFile","/home/ubuntu/proyecto/Storm/words.txt");
+		config.put("inputFile","/home/ubuntu/proyecto/storm/words.txt");
 		config.setDebug(true);
 		config.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, 1);
 		
