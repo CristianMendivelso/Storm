@@ -9,6 +9,7 @@ package com.mycompany.yahoostorm;
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.topology.TopologyBuilder;
+import org.apache.storm.StormSubmitter;
 
 public class HelloStorm {
 
@@ -23,11 +24,9 @@ public class HelloStorm {
 		builder.setBolt("word-spitter", new WordSpitterBolt()).shuffleGrouping("line-reader-spout");
 		builder.setBolt("word-counter", new WordCounterBolt()).shuffleGrouping("word-spitter");
 		
-		LocalCluster cluster = new LocalCluster();
-		cluster.submitTopology("HelloStorm", config, builder.createTopology());
-		Thread.sleep(10000);
-		
-		cluster.shutdown();
+		config.setNumWorkers(3);
+                StormSubmitter.submitTopology("words", config, builder.createTopology());
+                
 	}
 
 }
