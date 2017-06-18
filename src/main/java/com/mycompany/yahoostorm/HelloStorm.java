@@ -6,15 +6,15 @@
 package com.mycompany.yahoostorm;
 
 
-import backtype.storm.Config;
-import backtype.storm.LocalCluster;
-import backtype.storm.topology.TopologyBuilder;
+import org.apache.storm.Config;
+import org.apache.storm.LocalCluster;
+import org.apache.storm.topology.TopologyBuilder;
 
 public class HelloStorm {
 
 	public static void main(String[] args) throws Exception{
 		Config config = new Config();
-		config.put("inputFile","E:\\Investigacion\\PPp\\words.txt");
+		config.put("inputFile","/home/ubuntu/proyecto/Storm/words.txt");
 		config.setDebug(true);
 		config.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, 1);
 		

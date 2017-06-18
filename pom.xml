@@ -66,12 +66,14 @@
             </exclusions> 
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.storm</groupId>
-            <artifactId>storm-core</artifactId>
-            <version>0.9.1-incubating</version>
-            <scope>provided</scope>
-            <exclusions>
+       
+            <!-- https://mvnrepository.com/artifact/org.apache.storm/storm-core -->
+<dependency>
+    <groupId>org.apache.storm</groupId>
+    <artifactId>storm-core</artifactId>
+    <version>1.1.0</version>
+    <scope>provided</scope>
+    <exclusions>
                 
                 <exclusion> 
                     <groupId>org.slf4j</groupId>
@@ -82,6 +84,8 @@
                     <artifactId>log4j</artifactId>
                 </exclusion>
             </exclusions> 
+
+            
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper -->
 <dependency>
