@@ -25,7 +25,7 @@ public class HelloStorm {
 		builder.setBolt("word-counter", new WordCounterBolt()).shuffleGrouping("word-spitter");
 		
 		config.setNumWorkers(3);
-                StormSubmitter.submitTopology("words", config, builder.createTopology());
+                StormSubmitter.submitTopology("word-counter", config, builder.createTopology());
                 
 	}
 
