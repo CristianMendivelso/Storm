@@ -24,5 +24,5 @@ y reemplazarlas por
     cluster.shutdown();
  
 En caso de no ejecutar elimine en el archivo pom.xml la línea
-   " <scope>provided</scope> "
+   scope
 de la dependencia de apache storm
