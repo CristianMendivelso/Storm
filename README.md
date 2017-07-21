@@ -16,6 +16,7 @@ Para cambiar la cantidad de trabajadores solamente es editar la línea config.se
 **Para Correrlo En Modo Local**
 
 Eliminar estas dos filas del archivo HelloStorm.java
+    
     config.setNumWorkers(3);
     
     StormSubmitter.submitTopology("word-counter", config, builder.createTopology());
